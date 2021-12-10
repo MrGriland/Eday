@@ -49,6 +49,10 @@ public class WorkWithDB {
         if(userCursor.getCount()!=0) {
             userCursor.moveToFirst();
             MainActivity.UserId = userCursor.getInt(0);
+            MainActivity.UserName = userCursor.getString(1);
+            MainActivity.UserSurname = userCursor.getString(2);
+            MainActivity.UserPhoto = userCursor.getExtras().getByteArray(String.valueOf(3));
+            MainActivity.UserLogin = userCursor.getString(4);
             userCursor.close();
             return true;
         }
