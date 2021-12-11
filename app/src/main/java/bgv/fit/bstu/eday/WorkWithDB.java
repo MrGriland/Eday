@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 
+import bgv.fit.bstu.eday.Models.Task;
 import bgv.fit.bstu.eday.Models.User;
 
 public class WorkWithDB {
@@ -51,7 +52,7 @@ public class WorkWithDB {
             MainActivity.UserId = userCursor.getInt(0);
             MainActivity.UserName = userCursor.getString(1);
             MainActivity.UserSurname = userCursor.getString(2);
-            MainActivity.UserPhoto = userCursor.getExtras().getByteArray(String.valueOf(3));
+            MainActivity.UserPhoto = userCursor.getBlob(3);
             MainActivity.UserLogin = userCursor.getString(4);
             userCursor.close();
             return true;
@@ -71,7 +72,16 @@ public class WorkWithDB {
         cv.put(DBHelper.COLUMN_LOGIN, user.getLogin());
         cv.put(DBHelper.COLUMN_PASSWORD, user.getPassword());
         db.insert(DBHelper.UTABLE, null, cv);
+    }
 
+    public void InsertTask(Task task){
+        ContentValues cv = new ContentValues();
+        cv.put(DBHelper.COLUMN_TNAME, task.getName());
+        cv.put(DBHelper.COLUMN_TDESCRIPTION, task.getDescription());
+        cv.put(DBHelper.COLUMN_TDATE, task.getDate());
+        cv.put(DBHelper.COLUMN_TTIME, task.getTime());
+        cv.put(DBHelper.COLUMN_TUID, task.getUserId());
+        db.insert(DBHelper.TTABLE, null, cv);
     }
 
 /*    public void Delete(Recipe recipe){

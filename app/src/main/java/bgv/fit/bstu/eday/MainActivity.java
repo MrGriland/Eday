@@ -2,9 +2,11 @@ package bgv.fit.bstu.eday;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import org.json.JSONException;
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     SQLiteDatabase db;
     WorkWithDB workWithDB;
     TextView weatherinfo;
-    String apikey = "fedc36ed7df3300b6db8c1a6a622740b";
+    String apikey = "your api";
     String city = "Minsk";
     String readyurl = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+apikey+"&units=metric&lang=ru";
     public static Integer UserId = 0;
@@ -40,10 +42,22 @@ public class MainActivity extends AppCompatActivity {
         databaseHelper = new DBHelper(getApplicationContext());
         db = databaseHelper.getWritableDatabase();
         workWithDB = new WorkWithDB(db);
-        TextView textView = findViewById(R.id.rr);
-        textView.setText("ID: "+String.valueOf(UserId)+"\n"+UserName+"\n"+UserSurname+"\n"+UserLogin);
         weatherinfo = findViewById(R.id.weathertv);
-        new GetURLData().execute(readyurl);
+        try {
+            new GetURLData().execute(readyurl);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void Tasks(View view){
+        Intent intent = new Intent(this,TaskActivity.class);
+        startActivity(intent);
+    }
+
+    public void Profile(View view){
+        Intent intent = new Intent(this,ProfileActivity.class);
+        startActivity(intent);
     }
 
     private class GetURLData extends AsyncTask<String, String, String>{
@@ -94,8 +108,8 @@ public class MainActivity extends AppCompatActivity {
             try {
                 JSONObject jsonObject = new JSONObject(result);
                 weatherinfo.setText("В "+jsonObject.getString("name")+"е "+jsonObject.getJSONObject("main").getDouble("temp")+" и " + jsonObject.getJSONArray("weather").getJSONObject(0).getString("description"));
-            } catch (JSONException e) {
-                e.printStackTrace();
+            } catch(Exception e) {
+
             }
         }
     }

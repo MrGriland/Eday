@@ -8,17 +8,17 @@
     android:paddingLeft="30px"
     android:paddingRight="30px">
 
-    <TableRow>
+    <TableRow android:backgroundTint="#90ACA8">
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="Имя"
+            android:text="Название"
             android:textSize="22sp" />
 
         <EditText
-            android:id="@+id/name"
+            android:id="@+id/tnameet"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:textSize="22sp" />
@@ -30,49 +30,11 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="Фамилия"
+            android:text="Описание"
             android:textSize="22sp" />
 
         <EditText
-            android:id="@+id/surname"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:textSize="22sp" />
-    </TableRow>
-
-    <TableRow>
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="0.1"
-            android:paddingLeft="0dp"
-            app:srcCompat="@mipmap/ic_launcher" />
-
-        <Button
-            android:id="@+id/Choose"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#9F5050"
-            android:onClick="ChoosePhoto"
-            android:text="Выбрать"
-            android:textAlignment="center" />
-
-    </TableRow>
-
-    <TableRow>
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="Логин"
-            android:textSize="22sp" />
-
-        <EditText
-            android:id="@+id/login"
+            android:id="@+id/descret"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:textSize="22sp" />
@@ -84,25 +46,36 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="Пароль"
+            android:text="Дата"
             android:textSize="22sp" />
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/dateet"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
+            android:textSize="22sp" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Время"
+            android:textSize="22sp" />
+
+        <EditText
+            android:id="@+id/timeet"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
             android:textSize="22sp" />
     </TableRow>
 
     <Button
-        android:id="@+id/Register"
-        android:layout_width="344dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_span="2"
         android:backgroundTint="#9F5050"
-        android:onClick="Register"
-        android:text="Зарегистрироваться"
-        android:textAlignment="center" />
-
+        android:onClick="SaveTask"
+        android:text="Записать" />
 </TableLayout>
