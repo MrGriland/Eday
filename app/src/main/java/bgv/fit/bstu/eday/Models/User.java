@@ -1,11 +1,26 @@
 package bgv.fit.bstu.eday.Models;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class User {
+    @SerializedName("Id")
+    @Expose
     private Integer id;
+    @SerializedName("Name")
+    @Expose
     private String name;
+    @SerializedName("Surname")
+    @Expose
     private String surname;
+    @SerializedName("Photo")
+    @Expose
     private byte [] photo;
+    @SerializedName("Login")
+    @Expose
     private String login;
+    @SerializedName("Password")
+    @Expose
     private String password;
 
     public Integer getId() {

@@ -7,32 +7,20 @@
     android:background="#90ACA8"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/weathertv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14pt"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:ignore="MissingConstraints" />
+    <FrameLayout
+        android:id="@+id/nav_host_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="56dp"/>
 
-    <Button
-        android:id="@+id/tasksb"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#9F5050"
-        android:onClick="Tasks"
-        android:text="Задачи"
-        app:layout_constraintTop_toBottomOf="@id/weathertv"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#9F5050"
-        android:onClick="Profile"
-        android:text="Профиль"
-        app:layout_constraintTop_toBottomOf="@id/tasksb"
+        app:itemHorizontalTranslationEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_navigation_menu"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

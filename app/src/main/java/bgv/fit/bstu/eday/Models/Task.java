@@ -1,11 +1,26 @@
 package bgv.fit.bstu.eday.Models;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Task {
+    @SerializedName("Id")
+    @Expose
     private Integer id;
+    @SerializedName("Name")
+    @Expose
     private String name;
+    @SerializedName("Description")
+    @Expose
     private String description;
+    @SerializedName("Date")
+    @Expose
     private String date;
+    @SerializedName("Time")
+    @Expose
     private String time;
+    @SerializedName("UserId")
+    @Expose
     private Integer uid;
 
     public Integer getId() {

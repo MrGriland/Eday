@@ -13,6 +13,19 @@
         <entry key="..\:/Users/grish/AndroidStudioProjects/Eday/app/src/main/res/layout/fragment_first.xml" value="0.4" />
         <entry key="..\:/Users/grish/AndroidStudioProjects/Eday/app/src/main/res/layout/fragment_second.xml" value="0.2" />
         <entry key="..\:/Users/grish/AndroidStudioProjects/Eday/app/src/main/res/layout/list_item.xml" value="0.4" />
+        <entry key="..\:/Users/grish/AndroidStudioProjects/EdayClient/app/src/main/res/drawable/ic_launcher_background.xml" value="0.31666666666666665" />
+        <entry key="..\:/Users/grish/AndroidStudioProjects/EdayClient/app/src/main/res/drawable/ic_profile.xml" value="0.31666666666666665" />
+        <entry key="..\:/Users/grish/AndroidStudioProjects/EdayClient/app/src/main/res/drawable/profile.xml" value="0.31666666666666665" />
+        <entry key="..\:/Users/grish/AndroidStudioProjects/EdayClient/app/src/main/res/layout/activity_main.xml" value="0.30052083333333335" />
+        <entry key="..\:/Users/grish/AndroidStudioProjects/EdayClient/app/src/main/res/layout/activity_new_task.xml" value="0.30052083333333335" />
+        <entry key="..\:/Users/grish/AndroidStudioProjects/EdayClient/app/src/main/res/layout/activity_profile.xml" value="0.30052083333333335" />
+        <entry key="..\:/Users/grish/AndroidStudioProjects/EdayClient/app/src/main/res/layout/activity_registration.xml" value="0.30052083333333335" />
+        <entry key="..\:/Users/grish/AndroidStudioProjects/EdayClient/app/src/main/res/layout/activity_task.xml" value="0.16197916666666667" />
+        <entry key="..\:/Users/grish/AndroidStudioProjects/EdayClient/app/src/main/res/layout/first_fragment.xml" value="0.30052083333333335" />
+        <entry key="..\:/Users/grish/AndroidStudioProjects/EdayClient/app/src/main/res/layout/list_item.xml" value="0.30052083333333335" />
+        <entry key="..\:/Users/grish/AndroidStudioProjects/EdayClient/app/src/main/res/layout/second_fragment.xml" value="0.30052083333333335" />
+        <entry key="..\:/Users/grish/AndroidStudioProjects/EdayClient/app/src/main/res/layout/third_fragment.xml" value="0.30052083333333335" />
+        <entry key="..\:/Users/grish/AndroidStudioProjects/EdayClient/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.30052083333333335" />
       </map>
     </option>
   </component>
