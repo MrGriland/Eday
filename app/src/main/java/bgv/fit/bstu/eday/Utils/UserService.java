@@ -6,6 +6,7 @@ import bgv.fit.bstu.eday.Models.User;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
@@ -17,6 +18,7 @@ public interface UserService {
     @GET("user")
     Call<List<User>> getUser(@Query("login") String login, @Query("password") String password);
 
+    @Headers("Content-Type: application/json")
     @POST("adding")
     Call<User>addUser(@Body User user);
 

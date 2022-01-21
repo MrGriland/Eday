@@ -4,22 +4,19 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class User {
-    @SerializedName("Id")
+    @SerializedName("id")
     @Expose
     private Integer id;
-    @SerializedName("Name")
+    @SerializedName("name")
     @Expose
     private String name;
-    @SerializedName("Surname")
+    @SerializedName("surname")
     @Expose
     private String surname;
-    @SerializedName("Photo")
-    @Expose
-    private byte [] photo;
-    @SerializedName("Login")
+    @SerializedName("login")
     @Expose
     private String login;
-    @SerializedName("Password")
+    @SerializedName("password")
     @Expose
     private String password;
 
@@ -29,9 +26,6 @@ public class User {
     public String getName() {return name; }
     public String getSurname() {
         return surname;
-    }
-    public byte[] getPhoto() {
-        return photo;
     }
     public String getLogin() {
         return login;
@@ -46,9 +40,6 @@ public class User {
         this.name = name;
     }
     public void setSurname(String surname) {this.surname=surname;}
-    public void setPhoto(byte[] photo) {
-        this.photo = photo;
-    }
     public void setLogin(String login) {
         this.login = login;
     }

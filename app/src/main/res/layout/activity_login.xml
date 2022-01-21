@@ -3,8 +3,8 @@
     android:id="@+id/activity_authentication"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#90ACA8"
-    android:backgroundTint="#90ACA8">
+    android:background="#DBE3D3"
+    android:theme="@style/Theme.Eday">
 
 
     <EditText
@@ -38,7 +38,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#9F5050"
             android:onClick="Authorization"
             android:text="Авторизация" />
 
@@ -47,7 +46,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#9F5050"
             android:onClick="Registration"
             android:text="Регистрация" />
 

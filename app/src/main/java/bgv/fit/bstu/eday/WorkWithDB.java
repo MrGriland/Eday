@@ -25,7 +25,6 @@ public class WorkWithDB {
         User user = new User();
         user.setName(userCursor.getString(1));
         user.setSurname(userCursor.getString(2));
-        user.setPhoto(userCursor.getExtras().getByteArray(String.valueOf(3)));
         user.setLogin(userCursor.getString(4));
         user.setPassword(userCursor.getString(5));
         users.add(user);
@@ -33,7 +32,6 @@ public class WorkWithDB {
             user = new User();
             user.setName(userCursor.getString(1));
             user.setSurname(userCursor.getString(2));
-            user.setPhoto(userCursor.getExtras().getByteArray(String.valueOf(3)));
             user.setLogin(userCursor.getString(4));
             user.setPassword(userCursor.getString(5));
             users.add(user);
@@ -68,7 +66,6 @@ public class WorkWithDB {
 
         cv.put(DBHelper.COLUMN_NAME, user.getName());
         cv.put(DBHelper.COLUMN_SURNAME, user.getSurname());
-        cv.put(DBHelper.COLUMN_PHOTO, user.getPhoto());
         cv.put(DBHelper.COLUMN_LOGIN, user.getLogin());
         cv.put(DBHelper.COLUMN_PASSWORD, user.getPassword());
         db.insert(DBHelper.UTABLE, null, cv);

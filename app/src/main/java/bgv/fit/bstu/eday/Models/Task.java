@@ -3,25 +3,27 @@ package bgv.fit.bstu.eday.Models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Task {
-    @SerializedName("Id")
+import java.io.Serializable;
+
+public class Task implements Serializable {
+    @SerializedName("id")
     @Expose
     private Integer id;
-    @SerializedName("Name")
+    @SerializedName("iduser")
+    @Expose
+    private int iduser;
+    @SerializedName("name")
     @Expose
     private String name;
-    @SerializedName("Description")
+    @SerializedName("description")
     @Expose
     private String description;
-    @SerializedName("Date")
+    @SerializedName("date")
     @Expose
     private String date;
-    @SerializedName("Time")
+    @SerializedName("time")
     @Expose
     private String time;
-    @SerializedName("UserId")
-    @Expose
-    private Integer uid;
 
     public Integer getId() {
         return id;
@@ -35,7 +37,7 @@ public class Task {
     }
     public String getTime() {return time; }
     public Integer getUserId() {
-        return uid;
+        return iduser;
     }
     public void setId(Integer id) {
         this.id = id;
@@ -50,7 +52,7 @@ public class Task {
     public void setTime(String time) {
         this.time = time;
     }
-    public void setUserId(Integer uid) {
-        this.uid = uid;
+    public void setUserId(Integer iduserd) {
+        this.iduser = iduser;
     }
 }

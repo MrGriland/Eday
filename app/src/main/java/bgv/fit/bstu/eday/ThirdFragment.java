@@ -19,11 +19,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class ThirdFragment extends Fragment {
-
-    private ThirdViewModel mViewModel;
-    EditText surname,name;
-    TextView login;
-    ImageView imageView;
+    TextView login, surname, name;
 
     public static ThirdFragment newInstance() {
         return new ThirdFragment();
@@ -44,23 +40,11 @@ public class ThirdFragment extends Fragment {
     public void init(){
         surname = getView().findViewById(R.id.surnamet);
         name = getView().findViewById(R.id.namet);
-        imageView = (ImageView) getView().findViewById(R.id.imageViewt);
         login = getView().findViewById(R.id.logint);
         surname.setText(MainActivity.UserSurname);
         name.setText(MainActivity.UserName);
-        try {
-            Bitmap bitmap = BitmapFactory.decodeByteArray(MainActivity.UserPhoto, 0, MainActivity.UserPhoto.length);
-            imageView.setImageBitmap(bitmap);
-        }
-        catch (Exception e) {}
         login.setText(MainActivity.UserLogin);
     }
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(ThirdViewModel.class);
-        // TODO: Use the ViewModel
-    }
 
 }

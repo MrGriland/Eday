@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,8 +48,6 @@ public class LoginActivity extends AppCompatActivity {
         }
         else {
             if(checkUser(log, pass)) {
-                Intent intent = new Intent(this, MainActivity.class);
-                startActivity(intent);
                 Log.d("User login", "Success");
             }
             else
@@ -76,7 +75,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<User>> call, Throwable t) {
                 Log.e("Error:",t.getMessage());
-                Toast.makeText(getApplicationContext(), t.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -84,13 +82,13 @@ public class LoginActivity extends AppCompatActivity {
     public boolean checkUser(String login, String password) {
         getUser(login, password);
         if(!userList.isEmpty()&&login.equals(userList.get(0).getLogin())&&password.equals(userList.get(0).getPassword())) {
-            Toast.makeText(getApplicationContext(), userList.get(0).getName(),Toast.LENGTH_SHORT).show();
             MainActivity.UserId = userList.get(0).getId();
             MainActivity.UserName = userList.get(0).getName();
             MainActivity.UserSurname = userList.get(0).getSurname();
-            MainActivity.UserPhoto = userList.get(0).getPhoto();
             MainActivity.UserLogin = userList.get(0).getLogin();
             userList.clear();
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
             return true;
         }
         else {

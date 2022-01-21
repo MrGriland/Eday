@@ -3,16 +3,16 @@
     <item
         android:id="@+id/page_1"
         android:enabled="true"
-        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:icon="@drawable/ic_baseline_calendar_month_24"
         android:title="Дни"/>
     <item
         android:id="@+id/page_2"
         android:enabled="true"
-        android:icon="@android:drawable/ic_menu_day"
+        android:icon="@drawable/ic_baseline_calendar_today_24"
         android:title="Сегодня"/>
     <item
         android:id="@+id/page_3"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_info"
+        android:icon="@drawable/ic_baseline_person_24"
         android:title="Профиль"/>
 </menu>
